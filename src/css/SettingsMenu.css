@@ -1,0 +1,39 @@
+
+/* Settings Box Styling */
+.settings_box {
+    width: 30vw; /* Default for smaller screens */
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    border: 1px solid #e0e0e0;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Settings container for spacing */
+.settings {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem; /* Equivalent to space-y-7 (28px) */
+}
+
+/* Settings Title */
+.settings-title {
+    font-size: 2rem; /* Equivalent to text-3xl */
+    font-weight: 800; /* Equivalent to font-extrabold */
+    color: #343a40; /* Dark gray */
+    margin-bottom: 2rem; /* Equivalent to mb-8 */
+    text-align: center;
+}
+
+
+/* Button settings  */
+button{
+    align-self: center;
+    width: 30%;
+    height: 3rem;
+    border: #343a40 solid 2px;
+    border-radius: 10%;
+    background-color: aquamarine;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}

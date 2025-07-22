@@ -1,0 +1,63 @@
+/* Individual slider item styling */
+.slider {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Label styling */
+.slider label {
+    font-size: 1.125rem; /* Equivalent to text-lg */
+    font-weight: 600; /* Equivalent to font-semibold */
+    color: #495057; /* Medium dark gray */
+    margin-bottom: 0.5rem; /* Equivalent to mb-2 */
+}
+
+/* Input Range (Slider) Styling */
+.slider input[type="range"] {
+    width: 100%;
+    height: 8px; /* Equivalent to h-2 */
+    border-radius: 9999px; /* Equivalent to rounded-full */
+    background: var(--slider-track-bg, #e9ecef); /* This is where the color variable is used */
+    -webkit-appearance: none; /* Remove default Webkit styling */
+    appearance: none;
+    cursor: pointer;
+    outline: none; /* Remove outline on focus */
+    transition: background-color 0.2s ease-in-out; /* Smooth transition for track color */
+}
+
+/* Slider Thumb (Draggable part) Styling - Webkit (Chrome, Safari, Edge) */
+.slider input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px; /* Equivalent to w-5 */
+    height: 20px; /* Equivalent to h-5 */
+    border-radius: 50%; /* Equivalent to rounded-full */
+    background-color: var(--slider-thumb-bg, #007bff); /* This is where the color variable is used */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Equivalent to shadow-md */
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out; /* Smooth transitions */
+}
+
+/* Slider Thumb (Draggable part) Styling - Mozilla (Firefox) */
+.slider input[type="range"]::-moz-range-thumb {
+    width: 20px; /* Equivalent to w-5 */
+    height: 20px; /* Equivalent to h-5 */
+    border-radius: 50%; /* Equivalent to rounded-full */
+    background-color: var(--slider-thumb-bg, #007bff); /* This is where the color variable is used */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Equivalent to shadow-md */
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out; /* Smooth transitions */
+}
+
+/* Value display styling */
+.value-range {
+    margin-top: 0.75rem; /* Equivalent to mt-3 */
+    font-size: 1rem; /* Equivalent to text-base */
+    font-weight: 500; /* Equivalent to font-medium */
+    color: #6c757d; /* Medium gray */
+}
+
+/* Current value styling */
+.value-range .current-value {
+    font-weight: 700; /* Equivalent to font-bold */
+    color: var(--slider-value-color, #0056b3); /* This is where the color variable is used */
+}
