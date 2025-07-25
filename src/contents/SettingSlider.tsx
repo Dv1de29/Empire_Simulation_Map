@@ -78,7 +78,7 @@ function SettingSlider({ heading, type, color, value, onChange}: Props) {
                 id={type + "_cost"}
                 value={value} 
                 min={"1"} 
-                max={heading === 'size' ? "1000" : "40"}
+                max={heading === 'size' ? "5000" : "40"}
                 onChange={(e) => onChange(Number(e.target.value))}
                 />
             <div className="value-range">{"Value: " + value}</div>

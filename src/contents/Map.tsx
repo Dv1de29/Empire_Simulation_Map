@@ -75,7 +75,7 @@ function MapEu({
     // console.log("Map component: Selected Country is", selectedCountry);
     // console.log(countriesOnMap)
 
-    // console.log(mapData)
+    console.log(mapData.map(row => row.map(cell => cell.type)))
 
     const drawCountries = (country: string, color: string, rowIndex: number, colIndex: number) => {
         const newMapData = mapData.map(row => row.map(cell => cell.type))
@@ -165,14 +165,14 @@ function MapEu({
     const putTerrain = (row: number, column: number) => {
         setMapData(prevMap => {
             const newMapData = prevMap.map(r => [...r]);
-            newMapData[row][column].type = 3;
+            newMapData[row][column].type = 0;
             return newMapData
         })
     }
 
     return(
         <div className="map">
-            <img src={EuropeMap} alt="" id='Europe_Map' />
+            {/* <img src={EuropeMap} alt="" id='Europe_Map' /> */}
             {/* <img src={EuropeSeaMap} alt="" id='Europe_Sea'/> */}
             <div 
                 className="map-grid"
