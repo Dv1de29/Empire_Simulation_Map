@@ -2,11 +2,19 @@ import '../css/Interactive.css'
 
 import MapEu from "./Map";
 
+import { SliderValues } from '../types/types';
+
 interface InteractiveProps{
     selectedCountry: string;
+    selectedColor: string
+    sliderValues: SliderValues,
 }
 
-function Interactive({ selectedCountry }: InteractiveProps) {
+function Interactive({ 
+    selectedCountry,
+    selectedColor,
+    sliderValues
+}: InteractiveProps) {
     return (
         <div className="interactive">
             <div className="options">
@@ -14,7 +22,11 @@ function Interactive({ selectedCountry }: InteractiveProps) {
                 <div className="option"><span>{"Colors"}</span></div>
                 <div className="option"><span>{"Culture"}</span></div>
             </div>
-            <MapEu selectedCountry={selectedCountry} />
+            <MapEu 
+                selectedCountry={selectedCountry} 
+                selectedColor={selectedColor}
+                sliderValues={sliderValues}
+            />
         </div>
     );
 }

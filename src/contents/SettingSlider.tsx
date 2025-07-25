@@ -1,11 +1,12 @@
 import '../css/Slider.css'
 
-import { useState } from "react"
 
 interface Props{
     heading: string,
     type: string,
     color: string,
+    value: number;
+    onChange: (newValue: number) => void;
 }
 
 function setLabel(heading: string, type: string){
@@ -60,8 +61,7 @@ function getColor(color: string){
     }
 }
 
-function SettingSlider({ heading, type, color}: Props) {
-    const [value, setValue] = useState(5);
+function SettingSlider({ heading, type, color, value, onChange}: Props) {
     const COLOR = getColor(color)
 
     const styleSlider = {
@@ -79,7 +79,7 @@ function SettingSlider({ heading, type, color}: Props) {
                 value={value} 
                 min={"1"} 
                 max={heading === 'size' ? "1000" : "40"}
-                onChange={(e) => setValue(Number(e.target.value))}
+                onChange={(e) => onChange(Number(e.target.value))}
                 />
             <div className="value-range">{"Value: " + value}</div>
         </div>
